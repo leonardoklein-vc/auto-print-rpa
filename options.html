@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Configurações - Robô AGHUse</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f8;
+            color: #333;
+            margin: 0; padding: 30px;
+            display: flex; justify-content: center;
+        }
+        .container {
+            background: #fff; border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            width: 100%; max-width: 500px;
+            padding: 30px;
+        }
+        h2 { margin-top: 0; color: #2c3e50; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        .form-group { margin-bottom: 20px; }
+        label { display: block; font-weight: bold; margin-bottom: 8px; color: #555; }
+        select {
+            width: 100%; padding: 10px; border-radius: 6px;
+            border: 1px solid #ccc; font-size: 14px;
+        }
+        .btn-salvar {
+            background: #007bff; color: white; border: none;
+            padding: 12px 20px; border-radius: 6px; font-size: 16px;
+            cursor: pointer; width: 100%; font-weight: bold;
+            transition: background 0.3s;
+        }
+        .btn-salvar:hover { background: #0056b3; }
+        #status {
+            margin-top: 15px; font-size: 14px; color: #28a745;
+            font-weight: bold; text-align: center; height: 20px;
+        }
+        .disclaimer {
+            margin-top: 30px; padding-top: 15px; border-top: 1px solid #eee;
+            font-size: 12px; color: #888; text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>⚙️ Configurações do Robô</h2>
+    
+    <div class="form-group">
+        <label for="velocidade">Velocidade de Execução (Delay)</label>
+        <select id="velocidade">
+            <option value="1.5">Lento / Seguro (Recomendado para PCs lentos)</option>
+            <option value="1.0">Normal (Padrão)</option>
+            <option value="0.6">Rápido (Apenas para internet estável)</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="corTema">Cor do Painel (Interface)</label>
+        <select id="corTema">
+            <option value="#d32f2f">🔴 Vermelho Padrão</option>
+            <option value="#0056b3">🔵 Azul Institucional</option>
+            <option value="#28a745">🟢 Verde Sucesso</option>
+            <option value="#343a40">⚫ Modo Escuro (Dark)</option>
+        </select>
+    </div>
+
+    <button id="btnSalvar" class="btn-salvar">Salvar Configurações</button>
+    <div id="status"></div>
+
+    <div class="disclaimer">
+        <strong>AGHUse Auto-Print v7</strong><br>
+        Ferramenta desenvolvida por Leonardo Klein Rocha para otimização de rotinas operacionais e ganho de produtividade da equipe no HCPA.
+    </div>
+</div>
+
+<script src="options.js"></script>
+</body>
+</html>
